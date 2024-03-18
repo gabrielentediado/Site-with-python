@@ -1,0 +1,13 @@
+
+<h2 style="text-align: center;">Adicionar Novo Curso</h2>
+<hr>
+
+<form action="{{url_for('cria_alunos')}}" method="POST" class="form-control">
+	<label>Nome</label>
+	<input class="form-control" type="text" name="nome" placeholder="Nome do aluno" required>
+	<label>Idade</label>
+	<input class="form-control" type="text" name="idade" placeholder="idade do aluno" required>
+	<label>Matrícula</label>
+	<input class="form-control" type="number" name="matricula" placeholder="matricula do aluno" required >
+	<button class="btn btn-success">Adicionar</button>
+</form>

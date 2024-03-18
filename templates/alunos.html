@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="/cria_alunos">adcionar comprador</a>
+
+        </div>
+        <div class="col-xs-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>nome</th>
+                    <th>idade</th>
+                    <th>ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                {%for aluno in alunos%}
+                <tr>
+                    <td>{{aluno.nome}}</td>
+                    <td>{{aluno.idade}}</td>
+                    <td>
+                        <a href="{{aluno.id}}/atualiza" class="btn btn-secondary btn-xs">Editar</a>
+                        <a href="{{aluno.id}}/remove_aluno" class="btn btn-secondary btn-xs">Remover</a><br>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="text-align: center;">Atualizar Curso</h2>
+<hr>
+{%- for mensagem in get_flashed_messages()  %}
+	<div class="alert alert-danger">
+		{{mensagem}}
+	</div>
+{%- endfor %}
+
+<form action="{{url_for('atualiza_aluno', id=aluno.id)}}" method="POST" class="form-control">
+	<label>Nome</label>
+	<input class="form-control" type="text" name="nome" value="{{aluno.nome}}" required>
+	<label>Idade</label>
+	<input class="form-control" name="idade" value="{{aluno.idade}}">{{aluno.idade}}</input>
+	<label>Matrícula</label>
+	<input class="form-control" type="text" name="matricula" value="{{aluno.matricula}}" required >
+	<button class="btn btn-success">Atualizar</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introdução de flask</title>
+</head>
+<body>
+<h1>Integração de flask com HTML</h1>
+{% for fruta in frutas %}
+    {{fruta}}
+{% endfor %}
+
+<form action="{{url_for('index')}}" method="POST">
+    <input type="text" name="fruta">
+    <button>Adicionar</button>
+</form>
+</body>
+</html>
